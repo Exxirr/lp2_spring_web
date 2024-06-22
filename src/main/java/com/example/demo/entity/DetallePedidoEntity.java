@@ -27,4 +27,7 @@ public class DetallePedidoEntity {
 	@ManyToOne
 	@JoinColumn(name = "pedido_id", nullable = false)
 	private PedidoEntity pedidoEntity;
+	
+	
+	
 }
