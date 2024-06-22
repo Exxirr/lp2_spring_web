@@ -65,7 +65,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public UsuarioEntity buscarUsuarioPorCorreo(String correo) {
 
-		return null;
+		return usuarioRepository.findByCorreo(correo);
 	}
 
 }
