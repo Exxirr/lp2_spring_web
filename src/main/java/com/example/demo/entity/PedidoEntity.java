@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
-
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,5 +24,8 @@ public class PedidoEntity {
 	@ManyToOne
 	@JoinColumn(name = "usuario_id", nullable = false)
 	private UsuarioEntity usuarioEntity;
+	
+	@OneToMany(mappedBy = "pedidoEntity", cascade = CascadeType.ALL)
+	private List<DetallePedidoEntity> detallepedido;
 	
 }
